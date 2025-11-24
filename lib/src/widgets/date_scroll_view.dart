@@ -1,7 +1,8 @@
+import 'dart:math';
+
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:date_picker_scroll/date_picker_scroll.dart';
-import 'package:date_picker_scroll/src/extensions/list_extension.dart';
 import 'package:date_picker_scroll/src/extensions/string_extension.dart';
 
 class DateScrollView extends StatelessWidget {
@@ -44,17 +45,30 @@ class DateScrollView extends StatelessWidget {
   final ValueChanged<int> onTap;
 
   double _getScrollViewWidth(BuildContext context) {
-    String longestText = dates.longestString + scrollViewOptions.label;
-    double textWidth = longestText.width(
-      context,
-      style: scrollViewOptions.selectedTextStyle,
-    );
+    final padding = scrollViewOptions.horizontalPadding * 2;
+    if (scrollViewOptions.width != null) {
+      return scrollViewOptions.width! + padding;
+    }
+
+    double textWidth = 0;
+    for (final date in dates) {
+      final text = '$date${scrollViewOptions.label}';
+      final selectedWidth = text.width(
+        context,
+        style: scrollViewOptions.selectedTextStyle,
+      );
+      final unselectedWidth = text.width(
+        context,
+        style: scrollViewOptions.textStyle,
+      );
+      textWidth = max(textWidth, max(selectedWidth, unselectedWidth));
+    }
 
     if (locale.languageCode == ar) {
       return textWidth + 40;
     }
 
-    return textWidth + 8;
+    return textWidth + 8 + padding;
   }
 
   @override
@@ -96,6 +110,9 @@ class DateScrollView extends StatelessWidget {
     return GestureDetector(
       onTap: () => onTap(index),
       child: Container(
+        padding: EdgeInsets.symmetric(
+          horizontal: scrollViewOptions.horizontalPadding,
+        ),
         alignment: scrollViewOptions.alignment,
         child: Text(
           '${dates[index]}${scrollViewOptions.label}',

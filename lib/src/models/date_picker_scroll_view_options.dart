@@ -30,6 +30,8 @@ class ScrollViewDetailOptions {
     this.label = '',
     this.alignment = Alignment.centerLeft,
     this.margin,
+    this.width,
+    this.horizontalPadding = 0,
     this.selectedTextStyle =
         const TextStyle(fontSize: 16, fontWeight: FontWeight.w600),
     this.textStyle =
@@ -47,6 +49,12 @@ class ScrollViewDetailOptions {
 
   /// The amount of space that can be added to the year, month, and day.
   final EdgeInsets? margin;
+
+  /// Overrides the width of each column. If null, width is calculated dynamically.
+  final double? width;
+
+  /// Extra horizontal space added to both sides of the column content.
+  final double horizontalPadding;
 
   /// An immutable style describing how to format and paint text.
   final TextStyle textStyle;

@@ -1,3 +1,12 @@
+## 3.8.1
+
+* Move the date picker indicator behind the scroll columns so custom `indicatorColor` no longer obscures text.
+* Improve automatic column width calculation by measuring both selected and unselected text styles for every value, preventing month name truncation.
+* Add `horizontalPadding` to `ScrollViewDetailOptions` to control extra space on the left and right of each column without affecting the automatic width.
+* Update the example (`test_component.dart`) to demonstrate the new padding controls, custom indicator styling, locale tweaks, and disabling looping via `DatePickerOptions.isLoop`.
+
+---
+
 ## 3.7.5
 
 * Add `indicatorColor` and `indicatorBorderRadius` parameters to `DatePickerOptions` for customizing the center indicator appearance.

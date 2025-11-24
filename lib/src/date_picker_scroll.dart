@@ -306,15 +306,36 @@ class _ScrollDatePickerState extends State<ScrollDatePicker> {
 
   @override
   Widget build(BuildContext context) {
+    final indicator = widget.indicator ??
+        Container(
+          height: widget.options.itemExtent,
+          decoration: BoxDecoration(
+            color: widget.options.indicatorColor ??
+                Colors.grey.withOpacity(0.15),
+            borderRadius: widget.options.indicatorBorderRadius ??
+                const BorderRadius.all(Radius.circular(4)),
+          ),
+        );
+
     return Stack(
       alignment: Alignment.center,
       children: [
+        // Place indicator beneath scroll content.
+        IgnorePointer(
+          child: Align(
+            alignment: Alignment.center,
+            child: SizedBox(
+              width: double.infinity,
+              child: indicator,
+            ),
+          ),
+        ),
         Row(
           mainAxisAlignment: widget.scrollViewOptions.mainAxisAlignment,
           crossAxisAlignment: widget.scrollViewOptions.crossAxisAlignment,
           children: _getScrollDatePicker(),
         ),
-        // Date Picker Indicator
+        // Gradient overlay on top for fade effect.
         IgnorePointer(
           child: Column(
             mainAxisAlignment: MainAxisAlignment.center,
@@ -333,16 +354,7 @@ class _ScrollDatePickerState extends State<ScrollDatePicker> {
                   ),
                 ),
               ),
-              widget.indicator ??
-                  Container(
-                    height: widget.options.itemExtent,
-                    decoration: BoxDecoration(
-                      color: widget.options.indicatorColor ??
-                          Colors.grey.withOpacity(0.15),
-                      borderRadius: widget.options.indicatorBorderRadius ??
-                          const BorderRadius.all(Radius.circular(4)),
-                    ),
-                  ),
+              SizedBox(height: widget.options.itemExtent),
               Expanded(
                 child: Container(
                   decoration: BoxDecoration(
