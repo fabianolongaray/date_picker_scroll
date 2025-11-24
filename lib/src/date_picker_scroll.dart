@@ -311,7 +311,7 @@ class _ScrollDatePickerState extends State<ScrollDatePicker> {
           height: widget.options.itemExtent,
           decoration: BoxDecoration(
             color: widget.options.indicatorColor ??
-                Colors.grey.withOpacity(0.15),
+                Colors.grey.withValues(alpha: 0.15),
             borderRadius: widget.options.indicatorBorderRadius ??
                 const BorderRadius.all(Radius.circular(4)),
           ),
@@ -348,7 +348,7 @@ class _ScrollDatePickerState extends State<ScrollDatePicker> {
                       end: Alignment.bottomCenter,
                       colors: [
                         widget.options.backgroundColor,
-                        widget.options.backgroundColor.withOpacity(0.7),
+                        widget.options.backgroundColor.withValues(alpha: 0.7),
                       ],
                     ),
                   ),
@@ -362,7 +362,7 @@ class _ScrollDatePickerState extends State<ScrollDatePicker> {
                       begin: Alignment.topCenter,
                       end: Alignment.bottomCenter,
                       colors: [
-                        widget.options.backgroundColor.withOpacity(0.7),
+                        widget.options.backgroundColor.withValues(alpha: 0.7),
                         widget.options.backgroundColor,
                       ],
                     ),

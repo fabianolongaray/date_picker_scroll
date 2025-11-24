@@ -2,14 +2,14 @@ import 'package:flutter/material.dart';
 import 'package:date_picker_scroll/date_picker_scroll.dart';
 
 void main() {
-  runApp(MaterialApp(home: const MyApp()));
+  runApp(const MaterialApp(home: MyApp()));
 }
 
 class MyApp extends StatefulWidget {
   const MyApp({Key? key}) : super(key: key);
 
   @override
-  _MyAppState createState() => _MyAppState();
+  State<MyApp> createState() => _MyAppState();
 }
 
 class _MyAppState extends State<MyApp> {
@@ -19,7 +19,7 @@ class _MyAppState extends State<MyApp> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text("Scroll Date Picker Example"),
+        title: const Text("Scroll Date Picker Example"),
         centerTitle: true,
       ),
       body: Column(
@@ -29,7 +29,7 @@ class _MyAppState extends State<MyApp> {
             alignment: Alignment.center,
             child: Text(
               "$_selectedDate",
-              style: TextStyle(fontSize: 20, fontWeight: FontWeight.w500),
+              style: const TextStyle(fontSize: 20, fontWeight: FontWeight.w500),
             ),
           ),
           Container(
@@ -41,7 +41,7 @@ class _MyAppState extends State<MyApp> {
                   _selectedDate = DateTime.now();
                 });
               },
-              child: Text(
+              child: const Text(
                 "TODAY",
                 style: TextStyle(color: Colors.red),
               ),
@@ -51,7 +51,7 @@ class _MyAppState extends State<MyApp> {
             height: 250,
             child: ScrollDatePicker(
               selectedDate: _selectedDate,
-              locale: Locale('en'),
+              locale: const Locale('en'),
               onDateTimeChanged: (DateTime value) {
                 setState(() {
                   _selectedDate = value;
