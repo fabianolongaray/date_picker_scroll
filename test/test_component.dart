@@ -28,21 +28,18 @@ class _MyAppState extends State<MyApp> {
     final scrollViewOptions = DatePickerScrollViewOptions(
       day: ScrollViewDetailOptions(
         alignment: Alignment.center,
-        textAlign: TextAlign.center,
         textStyle: unselectedStyle,
         selectedTextStyle: selectedStyle,
         horizontalPadding: 16,
       ),
       month: ScrollViewDetailOptions(
         alignment: Alignment.center,
-        textAlign: TextAlign.center,
         textStyle: unselectedStyle,
         selectedTextStyle: selectedStyle,
         horizontalPadding: 20,
       ),
       year: ScrollViewDetailOptions(
         alignment: Alignment.center,
-        textAlign: TextAlign.center,
         textStyle: unselectedStyle,
         selectedTextStyle: selectedStyle,
         horizontalPadding: 18,
@@ -100,32 +97,6 @@ class _MyAppState extends State<MyApp> {
               },
             ),
           ),
-          /// Showcase second image source
-      // SizedBox(
-          //   height: 250,
-          //   child: ScrollDatePicker(
-          //     selectedDate: _selectedDate,
-          //     locale: Locale('ko'),
-          //     scrollViewOptions: DatePickerScrollViewOptions(
-          //       year: ScrollViewDetailOptions(
-          //         label: '년',
-          //         margin: const EdgeInsets.only(right: 8),
-          //       ),
-          //       month: ScrollViewDetailOptions(
-          //         label: '월',
-          //         margin: const EdgeInsets.only(right: 8),
-          //       ),
-          //       day: ScrollViewDetailOptions(
-          //         label: '일',
-          //       )
-          //     ),
-          //     onDateTimeChanged: (DateTime value) {
-          //       setState(() {
-          //         _selectedDate = value;
-          //       });
-          //     },
-          //   ),
-          // ),
         ],
       ),
     );
