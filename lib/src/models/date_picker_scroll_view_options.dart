@@ -36,6 +36,7 @@ class ScrollViewDetailOptions {
         const TextStyle(fontSize: 14, fontWeight: FontWeight.normal),
     this.isLoop = true,
     this.textScaleFactor = 1,
+    this.textAlign,
   });
 
   /// The text printed next to the year, month, and day.
@@ -58,4 +59,7 @@ class ScrollViewDetailOptions {
 
   /// The scaling factor for the text within this widget.
   final double textScaleFactor;
+
+  /// The text alignment for the year, month, and day text.
+  final TextAlign? textAlign;
 }

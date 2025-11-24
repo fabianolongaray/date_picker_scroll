@@ -1,8 +1,8 @@
 import 'dart:math';
 
 import 'package:flutter/material.dart';
-import 'package:scroll_date_picker/scroll_date_picker.dart';
-import 'package:scroll_date_picker/src/widgets/date_scroll_view.dart';
+import 'package:date_picker_scroll/date_picker_scroll.dart';
+import 'package:date_picker_scroll/src/widgets/date_scroll_view.dart';
 
 import 'utils/get_monthly_date.dart';
 
@@ -337,8 +337,10 @@ class _ScrollDatePickerState extends State<ScrollDatePicker> {
                   Container(
                     height: widget.options.itemExtent,
                     decoration: BoxDecoration(
-                      color: Colors.grey.withOpacity(0.15),
-                      borderRadius: const BorderRadius.all(Radius.circular(4)),
+                      color: widget.options.indicatorColor ??
+                          Colors.grey.withOpacity(0.15),
+                      borderRadius: widget.options.indicatorBorderRadius ??
+                          const BorderRadius.all(Radius.circular(4)),
                     ),
                   ),
               Expanded(

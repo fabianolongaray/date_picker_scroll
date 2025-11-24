@@ -7,6 +7,8 @@ class DatePickerOptions {
     this.perspective = 0.01,
     this.isLoop,
     this.backgroundColor = Colors.white,
+    this.indicatorColor,
+    this.indicatorBorderRadius,
   });
 
   /// Size of each child in the main axis
@@ -23,4 +25,10 @@ class DatePickerOptions {
 
   /// The color to paint behind the date picker
   final Color backgroundColor;
+
+  /// The color of the indicator displayed in the center of the ScrollDatePicker
+  final Color? indicatorColor;
+
+  /// The border radius of the indicator displayed in the center of the ScrollDatePicker
+  final BorderRadius? indicatorBorderRadius;
 }

@@ -1,3 +1,14 @@
+## 3.7.5
+
+* Add `indicatorColor` and `indicatorBorderRadius` parameters to `DatePickerOptions` for customizing the center indicator appearance.
+* Add `textAlign` parameter to `ScrollViewDetailOptions` for customizing text alignment of day, month, and year labels.
+
+---
+
+**Note:** Versions 3.7.4 and below were developed by the original author [mincheol-shin](https://github.com/mincheol-shin/scroll_date_picker). This fork maintains compatibility while adding new features.
+
+---
+
 ## 3.7.4
 
 * Add turkish months. Thanks @Barış Şenyerli. (#29)

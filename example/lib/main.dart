@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:scroll_date_picker/scroll_date_picker.dart';
+import 'package:date_picker_scroll/date_picker_scroll.dart';
 
 void main() {
   runApp(MaterialApp(home: const MyApp()));

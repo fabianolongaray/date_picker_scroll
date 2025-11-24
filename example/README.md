@@ -1,6 +1,6 @@
-# scroll_date_picker_example
+# date_picker_scroll_example
 
-Demonstrates how to use the scroll_date_picker plugin.
+Demonstrates how to use the date_picker_scroll plugin.
 
 ## Getting Started
 

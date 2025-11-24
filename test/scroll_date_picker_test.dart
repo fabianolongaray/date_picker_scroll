@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_test/flutter_test.dart';
-import 'package:scroll_date_picker/scroll_date_picker.dart';
-import 'package:scroll_date_picker/src/widgets/date_scroll_view.dart';
+import 'package:date_picker_scroll/date_picker_scroll.dart';
+import 'package:date_picker_scroll/src/widgets/date_scroll_view.dart';
 
 void main() {
   group("picker ui validation", () {
