@@ -1,6 +1,6 @@
 name: date_picker_scroll
 description: A customizable and easy-to-use date picker library for Flutter. Compatible with Android & iOS & Web.
-version: 3.8.1
+version: 3.8.2
 homepage: https://github.com/fabianolongaray/date_picker_scroll
 repository: https://github.com/fabianolongaray/date_picker_scroll
 

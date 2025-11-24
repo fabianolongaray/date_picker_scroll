@@ -1,3 +1,9 @@
+## 3.8.2
+
+* Remove `textAlign` parameter from `ScrollViewDetailOptions`. Use the `alignment` property instead, which provides the same functionality with better control over text positioning.
+
+---
+
 ## 3.8.1
 
 * Move the date picker indicator behind the scroll columns so custom `indicatorColor` no longer obscures text.
